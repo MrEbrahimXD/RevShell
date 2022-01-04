@@ -4,6 +4,22 @@ a Reverse shell utility for creating shells connections easily
 
  
  
+ 
+ 
+   _____             _____ _          _ _ 
+ |  __ \           / ____| |        | | |
+ | |__) |_____   _| (___ | |__   ___| | |
+ |  _  // _ \ \ / /\___ \| '_ \ / _ \ | |
+ | | \ \  __/\ V / ____) | | | |  __/ | |
+ |_|  \_\___| \_/ |_____/|_| |_|\___|_|_|
+                                         
+                                         
+ 
+ 
+ 
+ 
+
+ 
  # Install revshell using these commands
  
  ```bash
