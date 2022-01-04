@@ -4,7 +4,7 @@
 * Easy to use for beginners
 * idk lol hi xd                                                                                                                                  
 
- # Make sure if you've already installed git
+ # Make sure if you've already installed git and gcc
  * Ubuntu
  * Kali-Linux
  * Debian
@@ -13,7 +13,7 @@
  
  sudo apt update && sudo apt upgrade -y
  
- sudo apt-get install git -y 
+ sudo apt-get install -y git gcc 
  ```
  
  # Install revshell using these commands
