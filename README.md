@@ -1,4 +1,4 @@
-# RevShell Version 0.0.3
+# CatShell Version 0.0.3
 
 * a Reverse shell utility for creating shells connections easily
 * Easy to use for beginners
@@ -22,9 +22,9 @@
  
  git clone https://github.com/MrEbrahimXD/revshell
  
- gcc revshell.c -o revshell
+ gcc catshell.c -o catshell
  
- ./revshell
+ ./catshell
  
  
  ```
