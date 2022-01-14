@@ -37,7 +37,7 @@ int main(int argc , char* argv[])
 
 	if (argc < 2 || argc == 1)
 	{
-		printf("RevShell version 0.0.3\n\nUse -h or --help for help\n");
+		printf("CatShell version 0.0.3\n\nUse -h or --help for help\n");
 	}
 	else if ((strcmp(argv[1],"-h"))==0 || (strcmp(argv[1],"--help"))==0 )
 	{
@@ -186,7 +186,7 @@ int main(int argc , char* argv[])
 
 		else
 		{	
-			printf("Usage : ./revshell -t <php,shell,csharp,c,ncat>\n");
+			printf("Usage : ./catshell -t <php,shell,csharp,c,ncat>\n");
 		}
 
 
@@ -392,7 +392,7 @@ int main(int argc , char* argv[])
 	else if  ((strcmp(argv[1],"-t"))==0 && (strcmp(argv[3],"--ip"))==0 &&argc == 5)
 	{
 		// ./program[0] -t[1] php[2] --ip[3] 127.0.0.1[4]
-		printf("Usage : ./revshell -t <type> --ip <ip> -p <port>\n\nPort : \"I'm sleeping where are u\"\n");
+		printf("Usage : ./catshell -t <type> --ip <ip> -p <port>\n\nPort : \"I'm sleeping where are u\"\n");
 	}
 
 	else
@@ -404,7 +404,7 @@ int main(int argc , char* argv[])
 
 void PrintHelp()
 {
-	printf("Usage : ./program [OPTION] .. [FILE]\n\nOptions :\n\n-h --help print this help page\n-t --type <php,csharp,shell,c,ncat>\n-o --output output file\n-p --port specify a port number <1 to 65,535>\n\nLong Options :\n\n--ip specify an ip address <bash , ncat , python > later updates\n\nContact me when you find bugs <mrtankgt@outlook.com> MrEbrahimXD\n");
+	printf("Usage : ./catshell [OPTION] .. [FILE]\n\nOptions :\n\n-h --help print this help page\n-t --type <php,csharp,shell,c,ncat>\n-o --output output file\n-p --port specify a port number <1 to 65,535>\n\nLong Options :\n\n--ip specify an ip address <bash , ncat , python > later updates\n\nContact me when you find bugs <mrtankgt@outlook.com> MrEbrahimXD\n");
 }
 
 void GetPhp()
