@@ -29,7 +29,7 @@ char * ip_port;
 char * ip_addr;
 char * argument_ip;
 
-// Main Function  *******************************************   Main Function \\ 
+// Main Function  *******************************************   Main Function\\ 
 
 int main(int argc , char* argv[])
 {
