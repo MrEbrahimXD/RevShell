@@ -1,4 +1,4 @@
-# RevShell 
+# RevShell Version 0.0.3
 
 * a Reverse shell utility for creating shells connections easily
 * Easy to use for beginners
