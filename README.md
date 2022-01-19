@@ -16,7 +16,7 @@
  sudo apt-get install -y git gcc 
  ```
  
- # Install revshell using these commands
+ # Install CatShell using these commands
  
  ```bash
  
