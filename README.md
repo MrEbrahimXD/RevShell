@@ -1,4 +1,4 @@
-# CatShell Version 0.0.3
+# RevShell Version 0.0.4
 
 * a Reverse shell utility for creating shells connections easily
 * Easy to use for beginners
@@ -16,15 +16,15 @@
  sudo apt-get install -y git gcc 
  ```
  
- # Install CatShell using these commands
+ # Install RevShell using these commands
  
  ```bash
  
  git clone https://github.com/MrEbrahimXD/revshell
  
- gcc catshell.c -o catshell
+ gcc revshell.c -o revshell
  
- ./catshell
+ ./revshell
  
  
  ```
